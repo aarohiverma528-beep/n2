@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InteriorDesign | Luxury Architectural Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    
+    <style>
+        /* Modern Typography */
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        
+        /* Hero Section */
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+            min-height: 70vh;
+        }
+
+        /* Project Hover Effects using CSS only */
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .project-card img {
+            transition: transform 0.6s ease;
+            width: 100%;
+            display: block;
+        }
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+        .project-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        /* Service Box Styling */
+        .service-box {
+            transition: all 0.3s ease;
+            border-top: 5px solid transparent;
+        }
+        .service-box:hover {
+            background: #fff;
+            box-shadow: 0 1rem 3rem rgba(0,0,0,0.1) !important;
+            border-top: 5px solid #ffc107;
+            transform: translateY(-10px);
+        }
+
+        /* Smooth scroll for the whole page */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-warning border-3 shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">Interior<span class="text-warning">Design</span></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link px-3" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#projects">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 btn btn-warning text-dark ms-lg-3 px-4 fw-bold rounded-pill" href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-bg d-flex align-items-center text-white">
+        <div class="container text-center text-md-start py-5">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h1 class="display-3 fw-bold mb-4">Space Design <br><span class="text-warning">Redefined.</span></h1>
+                    <p class="lead mb-5 opacity-75 fs-4">Turning empty shells into luxurious sanctuaries through architectural precision and creative flair.</p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-md-start">
+                        <a href="#projects" class="btn btn-warning btn-lg px-5 py-3 fw-bold shadow">Our Projects</a>
+                        <a href="#services" class="btn btn-outline-light btn-lg px-5 py-3">View Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5 bg-light border-bottom">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-2">EXPERTISE</span>
+                <h2 class="display-5 fw-bold">Our Specializations</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">We provide a full spectrum of design services tailored to your aesthetic and functional needs.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box p-5 h-100 bg-white shadow-sm rounded-3">
+                        <i class="bi bi-house-heart text-warning display-4 mb-3"></i>
+                        <h4 class="fw-bold">Homes</h4>
+                        <p class="text-muted small mb-0">Custom interiors for villas and apartments focused on luxury living.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box p-5 h-100 bg-white shadow-sm rounded-3">
+                        <i class="bi bi-briefcase text-warning display-4 mb-3"></i>
+                        <h4 class="fw-bold">Offices</h4>
+                        <p class="text-muted small mb-0">Productivity-focused designs for modern corporate environments.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box p-5 h-100 bg-white shadow-sm rounded-3">
+                        <i class="bi bi-cart4 text-warning display-4 mb-3"></i>
+                        <h4 class="fw-bold">Retail</h4>
+                        <p class="text-muted small mb-0">High-impact retail layouts that enhance the shopping experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box p-5 h-100 bg-white shadow-sm rounded-3">
+                        <i class="bi bi-stars text-warning display-4 mb-3"></i>
+                        <h4 class="fw-bold">Art Decor</h4>
+                        <p class="text-muted small mb-0">Curated art and furniture selection to complete your space.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5">
+        <div class="container py-5">
+            <div class="d-flex justify-content-between align-items-end mb-5">
+                <div>
+                    <h2 class="display-5 fw-bold">Masterpieces</h2>
+                    <p class="text-muted mb-0">Hand-picked selection of our finest work.</p>
+                </div>
+                <a href="#" class="btn btn-link text-warning text-decoration-none fw-bold">ALL PROJECTS <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200" alt="Penthouse">
+                        <div class="project-overlay">
+                            <h3 class="fw-bold">The Golden Penthouse</h3>
+                            <p class="mb-0 small text-warning text-uppercase fw-bold">Residential</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="project-card h-100">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600" class="h-100 object-cover" style="object-fit: cover;" alt="Office">
+                        <div class="project-overlay">
+                            <h4 class="fw-bold">Modern Office</h4>
+                            <p class="mb-0 small text-warning text-uppercase fw-bold">Commercial</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=600" alt="Loft">
+                        <div class="project-overlay">
+                            <h5 class="fw-bold">Industrial Loft</h5>
+                            <p class="mb-0 small text-warning">Renovation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80&w=600" alt="Spa">
+                        <div class="project-overlay">
+                            <h5 class="fw-bold">Serene Spa</h5>
+                            <p class="mb-0 small text-warning">Hospitality</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="https://i.pinimg.com/1200x/6d/eb/53/6deb53528529d9aa11159d17d25c6cb7.jpg" alt="Mansion">
+                        <div class="project-overlay">
+                            <h5 class="fw-bold">Classic Mansion</h5>
+                            <p class="mb-0 small text-warning">Estate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-dark text-white border-top border-warning border-4">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5">
+                    <h2 class="display-4 fw-bold mb-4">Ready to start <br>your <span class="text-warning">Project?</span></h2>
+                    <p class="text-muted mb-5 fs-5">Join 300+ satisfied clients and let's create something extraordinary together.</p>
+                    
+                    <div class="mb-4 d-flex align-items-center">
+                        <div class="bg-warning text-dark p-3 rounded-circle me-3"><i class="bi bi-telephone-fill"></i></div>
+                        <div><h6 class="mb-0">Call Us</h6><p class="text-muted mb-0">+1 (234) 567 8910</p></div>
+                    </div>
+                    <div class="mb-4 d-flex align-items-center">
+                        <div class="bg-warning text-dark p-3 rounded-circle me-3"><i class="bi bi-envelope-paper-fill"></i></div>
+                        <div><h6 class="mb-0">Email</h6><p class="text-muted mb-0">hello@interiorstudio.com</p></div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="bg-white text-dark p-4 p-md-5 rounded-4 shadow-lg">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">NAME</label>
+                                    <input type="text" class="form-control bg-light border-0 py-3" placeholder="Full Name">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">EMAIL</label>
+                                    <input type="email" class="form-control bg-light border-0 py-3" placeholder="Email Address">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small fw-bold">MESSAGE</label>
+                                    <textarea class="form-control bg-light border-0 py-3" rows="4" placeholder="Tell us about your space"></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button class="btn btn-warning btn-lg w-100 py-3 fw-bold text-dark shadow">Submit Request</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <h4 class="fw-bold mb-4">Interior<span class="text-warning">Design</span></h4>
+                    <p class="text-muted">A premier design studio dedicated to blending elegance with modern living. Our work spans residential, commercial, and retail sectors globally.</p>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 ms-auto">
+                    <h6 class="text-warning text-uppercase mb-4 fw-bold">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none small d-block mb-2">Our Story</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none small d-block mb-2">Architects</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none small d-block mb-2">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h6 class="text-warning text-uppercase mb-4 fw-bold">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none small d-block mb-2">Privacy Policy</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none small d-block mb-2">Terms of Use</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none small d-block mb-2">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-warning text-uppercase mb-4 fw-bold">Follow Us</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-warning btn-sm rounded-circle"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-warning btn-sm rounded-circle"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-warning btn-sm rounded-circle"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <p class="text-center text-muted small mt-4 mb-0">&copy; 2025 InteriorDesign Studio. High-End Architectural Solutions.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
